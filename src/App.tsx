@@ -1,25 +1,29 @@
-import React from 'react';
-// @ts-ignore
-import logo from './logo.svg';
-import './App.css';
-import {Home} from './pages';
+import React from "react";
+
+import "./App.css";
+
+import { ProtectedRoute, routes } from "./router";
+
+type TSubRoutes = {
+  path: string;
+  component: any;
+};
+
+type TRoute = {
+  path: string;
+  component: any;
+  exact?: boolean;
+  routes?: Array<TSubRoutes>;
+  name: string;
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Home />
-        </a>
+        {routes.map((route: TRoute, idx: number) => (
+          <ProtectedRoute key={idx} {...route} />
+        ))}
       </header>
     </div>
   );
