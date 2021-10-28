@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "./App.css";
+import './App.css';
 
-import { ProtectedRoute, routes } from "./router";
+import { ProtectedRoute, routes } from './router';
 
 type TSubRoutes = {
   path: string;
@@ -19,8 +19,8 @@ type TRoute = {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         {routes.map((route: TRoute, idx: number) => (
           <ProtectedRoute key={idx} {...route} />
         ))}

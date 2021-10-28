@@ -1,17 +1,17 @@
-import { Home, Login } from "../../pages";
+import { Home, Login } from '../../pages';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: Login,
     exact: true,
-    name: "login",
+    name: 'login',
   },
   {
-    path: "/home",
+    path: '/home',
     component: Home,
     exact: true,
-    name: "home",
+    name: 'home',
     // routes: [
     //   {
     //     path: '/home/music',
@@ -24,16 +24,16 @@ const routes = [
     // ],
   },
   {
-    path: "/home/music",
+    path: '/home/music',
     // component: Music,
     component: `MUSIC`,
-    name: "music",
+    name: 'music',
   },
   {
-    path: "/home/video",
+    path: '/home/video',
     // component: VideoPage,
-    component: "VideoPage",
-    name: "video",
+    component: 'VideoPage',
+    name: 'video',
   },
 ];
 
