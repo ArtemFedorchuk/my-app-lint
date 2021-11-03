@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './App.css';
-
 import { ProtectedRoute, routes } from './router';
 
 type TSubRoutes = {
@@ -19,7 +17,7 @@ type TRoute = {
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App' style={{ backgroundColor: '#171923', height: window.innerHeight }}>
       <header className='App-header'>
         {routes.map((route: TRoute, idx: number) => (
           <ProtectedRoute key={idx} {...route} />

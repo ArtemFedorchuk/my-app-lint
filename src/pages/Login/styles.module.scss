@@ -2,9 +2,12 @@
 
 .loginWrapper {
   text-align: center;
+  position: relative;
+
 }
 
 .form {
+  position: absolute;
   max-width: 300px;
   width: 100%;
   display: flex;
@@ -14,6 +17,9 @@
   color: #000;
   margin: 0 auto;
   border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
 }
 
 .formTitle {

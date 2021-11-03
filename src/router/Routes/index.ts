@@ -1,4 +1,4 @@
-import { Home, Login } from '../../pages';
+import { Home, Login, Users } from '../../pages';
 
 const routes = [
   {
@@ -12,27 +12,23 @@ const routes = [
     component: Home,
     exact: true,
     name: 'home',
-    // routes: [
-    //   {
-    //     path: '/home/music',
-    //     component: Music,
-    //   },
-    //   {
-    //     path: '/home/video',
-    //     component: VideoPage,
-    //   },
-    // ],
+    routes: [
+      // {
+      //   path: '/home/users',
+      //   component: Users,
+      //   name: 'music',
+      // },
+    ],
   },
   {
-    path: '/home/music',
-    // component: Music,
-    component: `MUSIC`,
+    path: '/home/users',
+    component: Users,
     name: 'music',
   },
   {
     path: '/home/video',
     // component: VideoPage,
-    component: 'VideoPage',
+    component: Users,
     name: 'video',
   },
 ];

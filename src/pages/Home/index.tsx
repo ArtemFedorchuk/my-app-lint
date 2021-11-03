@@ -3,8 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 import { Cube } from '../../atoms';
 
-const Home = (): any => {
+const Home = (props: any): any => {
   const history = useHistory();
+
+  console.log('props ', props);
 
   const auth = false;
 
